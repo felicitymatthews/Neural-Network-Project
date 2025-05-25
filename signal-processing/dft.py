@@ -28,8 +28,8 @@ def fft(x):
     if not is_power_of_two(N):
         return dft_matrix_vector(x)
     X = np.zeros(N, dtype=np.complex128)
-    if N == 1;
-    return x
+    if N == 1:
+        return x
     even = fft(x[::2])
     odd = fft(x[1::2])
     W = np.exp(-2j* np.pi * np.arange(N) / N )
